@@ -1,0 +1,18 @@
+<form style= "width: 500px; margin: 0 auto; padding-top:30px;" #depositoForm="ngForm" (ngSubmit)="realizarDeposito(depositoForm)">
+    <h1>Realizar Depósito</h1>
+
+    <label form="valor">Data</label>
+    <input type="datetime" name="dataHora" [ngModel]="deposito.dataHora | date:'medium'" disabled>
+
+    <label form="hash">Hash</label>
+    <input type="text" name="hash" [(ngModel)]="deposito.hash" required>
+
+    <label form="valor">Valor</label>
+    <input type="text" name="valor" [(ngModel)]="deposito.valor" required>
+
+    <p [hidden] = "!error" style="color: red;">
+        {{ errorDesc }}
+    </p> 
+    <button class="btn waves-effect waves-light">Enviar        
+    </button> 
+</form>

@@ -12,13 +12,16 @@ import { LoginComponent } from './component/login/login.component';
 import { ContaComponent } from './component/conta/conta.component';
 import { RecuperarSenhaComponent } from './component/recuperar-senha/recuperar-senha.component';
 import { HomeComponent } from './component/home/home.component';
-import { CPFPipe } from './cpf.pipe';
 import { ClienteViewComponent } from './component/cliente/cliente-view/cliente-view.component';
 import { ContaViewComponent } from './component/conta/conta-view/conta-view.component';
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { AgGridModule } from 'ag-grid-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DepositoComponent } from './component/deposito/deposito.component';
+import { SaqueComponent } from './component/saque/saque.component';
+import { TransferenciaComponent } from './component/transferencia/transferencia.component';
+import { ExtratoComponent } from './component/extrato/extrato.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -32,10 +35,13 @@ const maskConfig: Partial<IConfig> = {
     ContaComponent,
     RecuperarSenhaComponent,
     HomeComponent,
-    CPFPipe,
     ClienteViewComponent,
     ContaViewComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    DepositoComponent,
+    SaqueComponent,
+    TransferenciaComponent,
+    ExtratoComponent
   ],
   imports: [
     BrowserModule,

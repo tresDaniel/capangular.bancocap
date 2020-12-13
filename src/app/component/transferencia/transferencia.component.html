@@ -1,0 +1,21 @@
+<form style= "width: 500px; margin: 0 auto; padding-top:30px;" #transferForm="ngForm" (ngSubmit)="realizarTransferencia(transferForm)">
+    <h1>Realizar Transferência</h1>
+
+    <label form="valor">Data</label>
+    <input type="datetime" name="dataHora" [ngModel]="transferencia.dataHora | date:'medium'" disabled>
+
+    <label form="hash">Hash de Origem</label>
+    <input type="text" name="hash" [(ngModel)]="transferencia.hash" required>
+
+    <label form="hash">Hash de Destino</label>
+    <input type="text" name="hashDestino" [(ngModel)]="transferencia.hashDestino" required>
+
+    <label form="valor">Valor</label>
+    <input type="text" name="valor" [(ngModel)]="transferencia.valor" required>
+
+    <p [hidden] = "!error" style="color: red;">
+        {{ errorDesc }}
+    </p> 
+    <button class="btn waves-effect waves-light">Enviar        
+    </button> 
+</form>

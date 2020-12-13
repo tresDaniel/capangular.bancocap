@@ -1,0 +1,20 @@
+<form style= "width: 500px; margin: 0 auto; padding-top:30px;" #saqueForm="ngForm" (ngSubmit)="realizarSaque(saqueForm)">
+    <h1>Realizar Saque</h1>
+
+    <label form="valor">Data</label>
+    <input type="datetime" name="dataHora" [ngModel]="saque.dataHora | date:'medium'" disabled>
+
+    <label form="hash">Hash</label>
+    <input type="text" name="hash" [(ngModel)]="saque.hash" required>
+
+    <label form="valor">Valor</label>
+    <input type="text" name="valor" [(ngModel)]="saque.valor" required>
+
+    <p [hidden] = "!error" style="color: red;">
+        {{ errorDesc }}
+    </p> 
+    <button class="btn waves-effect waves-light">Enviar        
+    </button> 
+    {{ saqueForm.valid }}
+    {{ saqueForm.value.dataHora }}
+</form>
