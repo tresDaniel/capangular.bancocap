@@ -1,17 +1,37 @@
-
-<div class="navbar-fixed">
+<div class="navbar-fixed"   *ngIf="router.url != '/login'"> 
   <nav>
     <div class="nav-wrapper">
       <a routerLink="/home" class=""><img src="/assets/cap-logo.png" style="width: 170px; margin-top:10px; margin-left:30px"/></a>
-
-      <ul id="nav-mobile" class="right" style="margin-right:30px">
-        <li><a routerLink="/cliente" routerLinkActive="active">Cadastrar Cliente</a></li>
-        <li><a routerLink="/perfil" routerLinkActive="active">Clientes</a></li>
-        <li><a routerLink="/conta" routerLinkActive="active">Cadastrar Conta</a></li>
-        <li><a routerLink="/dados-conta" routerLinkActive="active">Contas</a></li>
+      <ul id="nav-mobile" class="right menu" style="margin-right:30px">
+        <li class="dropdown-submenu">Clientes
+          <ul class="submenu">
+              <li><a  routerLink="/cliente" routerLinkActive="active">Cadastrar Cliente</a></li>
+              <li><a  routerLink="/perfil" routerLinkActive="active">Visualizar Clientes</a></li>              
+          </ul>
+        </li>
+        <li class="dropdown-submenu">Conta
+          <ul class="submenu">
+              <li><a routerLink="/conta" routerLinkActive="active">Cadastrar Conta</a></li>
+              <li><a  routerLink="/dados-conta" routerLinkActive="active" >Visualizar Contas</a></li>              
+          </ul>
+        </li>
+        <li class="dropdown-submenu">Transações
+          <ul class="submenu">
+            <li><a routerLink="/deposito" routerLinkActive="active">Depósito</a></li>
+            <li><a routerLink="/saque" routerLinkActive="active">Saque</a></li>
+            <li><a routerLink="/transferencia" routerLinkActive="active">Transferência</a></li>           
+          </ul>
+        </li>       
+        <li><a routerLink="/extrato" routerLinkActive="active">Extrato</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Sair</a></li>
       </ul>
     </div>
   </nav>
 </div>
 
+
 <router-outlet></router-outlet>
+
+<div class="rodape"   *ngIf="router.url != '/login'"> 
+  Copyright © 2020 Todos os direitos reservados.
+</div>

@@ -14,6 +14,8 @@ h1 {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 h2 {
@@ -86,4 +88,46 @@ tr > td > input {
 
 .card-home .material-icons {
   font-size: 40px !important;
+}
+.menu {
+  text-transform: uppercase;
+}
+
+ul#nav-mobile > li {
+  width: 190px;
+  text-align: center;
+}
+
+.dropdown-submenu .submenu {
+  background: #020024;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+li.dropdown-submenu {
+  text-align: center;
+}
+
+.dropdown-submenu:hover .submenu {
+  visibility: visible;
+}
+
+.dropdown-submenu .submenu li:hover {
+  opacity: 0.7;
+}
+
+.rodape {
+  background-color: #cccccc;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+input.ng-valid.ng-dirty.ng-touched {
+  text-align: left !important;
 }
